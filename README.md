@@ -17,7 +17,9 @@ $ sudo apt-get install libjpeg-dev libpng-dev libtiff5-dev libjasper-dev libdc13
 ## install java support
 
 $ sudo add-apt-repository ppa:webupd8team/java
+
 $ sudo apt-get update
+
 $ sudo apt-get install oracle-java8-installer
 
 $ sudo nano /etc/environment
