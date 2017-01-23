@@ -36,12 +36,31 @@ $ sudo -s
 
 $ cd /opt
 
-$ /opt$ git clone https://github.com/Itseez/opencv.git
+/opt$ git clone https://github.com/Itseez/opencv.git
 
-$ /opt$ git clone https://github.com/Itseez/opencv_contrib.git
+/opt$ git clone https://github.com/Itseez/opencv_contrib.git
 
-## install OpenCV
+## build and install OpenCV
 
-$ /opt/opencv$ mkdir release
+/opt$ cd opencv
 
-$ 
+/opt/opencv$ mkdir release
+
+/opt/opencv$ cd release
+
+/opt/opencv/release$ cmake -D BUILD_TIFF=ON -D WITH_CUDA=OFF -D ENABLE_AVX=OFF -D WITH_OPENGL=OFF -D WITH_OPENCL=OFF -D WITH_IPP=OFF -D WITH_TBB=ON -D BUILD_TBB=ON -D WITH_EIGEN=OFF -D WITH_V4L=OFF -D WITH_VTK=OFF -D BUILD_TESTS=OFF -D BUILD_PERF_TESTS=OFF -D CMAKE_BUILD_TYPE=RELEASE  -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=/opt/opencv_contrib/modules /opt/opencv/
+
+/opt/opencv$ make -j4
+
+/opt/opencv$ make install
+
+/opt/opencv$ exit
+
+/opt/opencv$ cd ~
+
+## test instalation
+
+$ python3.5
+>>> import cv2
+>>> cv2.__version__
+
