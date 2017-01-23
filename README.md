@@ -1,4 +1,4 @@
-# installopencv3.2ubuntu
+# install OpenCV 3.2 in Ubuntu 16.04
 How to install OpenCV in Ubuntu for C/C++, Python and Java
 
 ## updating ubuntu
@@ -54,11 +54,15 @@ $ cd /opt
 
 /opt/opencv$ make install
 
+/opt/opencv$ ldconfig
+
 /opt/opencv$ exit
 
 /opt/opencv$ cd ~
 
 ## test instalation
+	
+$ pkg-config --modversion opencv
 
 $ python3.5
 >>> import cv2
