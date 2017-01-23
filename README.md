@@ -67,6 +67,19 @@ $ cd /opt
 $ pkg-config --modversion opencv
 
 $ python3.5
->>> import cv2
->>> cv2.__version__
+```python
+import cv2
+cv2.__version__
+exit()
+```
+$ cd Documents/cpp_opencv_test
 
+$ g++ main.cpp -o first `pkg-config --cflags --libs opencv`
+
+$./first
+
+$ cd ~/Documents/cpp_opencv_test
+
+~/Documents/java_opencv_test$ javac -cp .:/usr/local/share/OpenCV/java/opencv-320.jar HelloCV.java
+
+~/Documents/java_opencv_test$ java -Djava.library.path=/usr/local/share/OpenCV/java/ -cp .:/usr/local/share/OpenCV/java/opencv-320.jar HelloCV
