@@ -1,4 +1,4 @@
-# install OpenCV 3.2 in Ubuntu 16.04
+# Install OpenCV 3.2 in Ubuntu 16.04
 How to install OpenCV in Ubuntu for C/C++, Python and Java
 
 ## updating ubuntu
