@@ -72,14 +72,30 @@ import cv2
 cv2.__version__
 exit()
 ```
-$ cd Documents/cpp_opencv_test
+$ mkdir java_test
 
-$ g++ main.cpp -o first `pkg-config --cflags --libs opencv`
+$ cd java_test
 
-$./first
+~/java_test$ wget https://github.com/doleron/installopencv3.2ubuntu/raw/master/HelloCV.java
 
-$ cd ~/Documents/cpp_opencv_test
+~/java_test$ javac -cp .:/usr/local/share/OpenCV/java/opencv-320.jar HelloCV.java
 
-~/Documents/java_opencv_test$ javac -cp .:/usr/local/share/OpenCV/java/opencv-320.jar HelloCV.java
+~/java_test$ java -Djava.library.path=/usr/local/share/OpenCV/java/ -cp .:/usr/local/share/OpenCV/java/opencv-320.jar HelloCV
 
-~/Documents/java_opencv_test$ java -Djava.library.path=/usr/local/share/OpenCV/java/ -cp .:/usr/local/share/OpenCV/java/opencv-320.jar HelloCV
+~/java_test$ cd ~
+
+$ mkdir cpp_test
+
+~/cpp_test$ cd cpp_test
+
+~/cpp_test$ wget https://github.com/doleron/installopencv3.2ubuntu/raw/master/main.cpp
+
+~/cpp_test$ wget https://github.com/doleron/installopencv3.2ubuntu/raw/master/fish.jpeg
+
+~/cpp_test$ g++ main.cpp -o first `pkg-config --cflags --libs opencv`
+
+~/cpp_test$ ./first
+
+press ESC to exit
+
+
