@@ -4,6 +4,7 @@ How to install OpenCV in Ubuntu for C/C++, Python and Java
 ## updating ubuntu
 
 $ sudo apt-get update
+
 $ sudo apt-get upgrade
 
 ## install dependencies
