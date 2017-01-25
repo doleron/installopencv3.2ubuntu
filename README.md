@@ -94,6 +94,7 @@ $ mkdir cpp_test
 ~/cpp_test$ wget https://github.com/doleron/installopencv3.2ubuntu/raw/master/fish.jpeg
 
 ~/cpp_test$ g++ main.cpp -o first \`pkg-config --cflags --libs opencv\`
+
 ~/cpp_test$ ./first
 
 press ESC to exit
